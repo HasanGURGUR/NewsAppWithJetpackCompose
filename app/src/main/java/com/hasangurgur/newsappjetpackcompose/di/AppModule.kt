@@ -11,6 +11,7 @@ import com.hasangurgur.newsappjetpackcompose.domain.usecases.app_entry.ReadAppEn
 import com.hasangurgur.newsappjetpackcompose.domain.usecases.app_entry.SaveAppEntry
 import com.hasangurgur.newsappjetpackcompose.domain.usecases.news.GetNews
 import com.hasangurgur.newsappjetpackcompose.domain.usecases.news.NewsUseCases
+import com.hasangurgur.newsappjetpackcompose.domain.usecases.news.SearchNews
 import com.hasangurgur.newsappjetpackcompose.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -57,7 +58,8 @@ object AppModule {
     @Singleton
     fun provideNewsUseCases(newsRepository: NewsRepository): NewsUseCases {
         return NewsUseCases(
-            getNews = GetNews(newsRepository)
+            getNews = GetNews(newsRepository),
+            searchNews = SearchNews(newsRepository)
         )
 }
 
