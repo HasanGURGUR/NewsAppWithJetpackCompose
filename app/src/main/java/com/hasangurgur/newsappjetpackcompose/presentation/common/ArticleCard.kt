@@ -63,7 +63,7 @@ fun ArticleCard(
                 )
         ) {
             Text(
-                text = article.title,
+                text = article.title.orEmpty(),
                 style = MaterialTheme.typography.bodyMedium,
                 color = colorResource(id = R.color.text_title),
                 maxLines = 2,
@@ -89,7 +89,7 @@ fun ArticleCard(
                 Spacer(modifier = Modifier.width(ExtraSmallPadding2))
 
                 Text(
-                    text = article.publishedAt,
+                    text = article.publishedAt.orEmpty(),
                     style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                     color = colorResource(id = R.color.body)
                 )

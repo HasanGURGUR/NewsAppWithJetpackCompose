@@ -16,6 +16,27 @@ import com.hasangurgur.newsappjetpackcompose.presentation.Dimens
 @Composable
 fun ArticlesList(
     modifier: Modifier = Modifier,
+    articles: List<Article>,
+    onClick: (Article) -> Unit,
+) {
+    LazyColumn(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.spacedBy(Dimens.mediumPadding1),
+        contentPadding = PaddingValues(all = Dimens.ExtraSmallPadding2)
+    ) {
+        items(count = articles.size) {
+            val article = articles[it]
+            ArticleCard(article = article, onClick = { onClick(article) })
+
+        }
+    }
+
+}
+
+
+@Composable
+fun ArticlesList(
+    modifier: Modifier = Modifier,
     articles: LazyPagingItems<Article>,
     onClick: (Article) -> Unit,
 ) {
