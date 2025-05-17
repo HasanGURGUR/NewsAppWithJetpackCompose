@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
@@ -17,7 +16,6 @@ import com.hasangurgur.newsappjetpackcompose.R
 import com.hasangurgur.newsappjetpackcompose.domain.model.Article
 import com.hasangurgur.newsappjetpackcompose.presentation.Dimens
 import com.hasangurgur.newsappjetpackcompose.presentation.common.ArticlesList
-import com.hasangurgur.newsappjetpackcompose.presentation.nvgraph.Route
 
 @Composable
 fun BookmarkScreen(
